@@ -1,0 +1,14 @@
+{
+  "useRDPLink": false,
+  "useSpotImage": true,
+  "securityGroupName": "ec2-gaming",
+  "spotPrice": "0.50",
+  "spotDuration": 360,
+  "instanceType": "g2.2xlarge",
+  "imageId": "ami-8735c5c3",
+  "username": "Administrator",
+  "password": "rRmbgYum8g",
+  "accessKeyId": "",
+  "secretAccessKey": "",
+  "region": ""
+}

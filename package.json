@@ -1,0 +1,24 @@
+{
+  "name": "ec2-gaming",
+  "version": "1.0.0",
+  "description": "A script that helps start and stop EC2 gaming instances",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mneumegen/ec2-gaming.git"
+  },
+  "author": "Mike Neumegen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mneumegen/ec2-gaming/issues"
+  },
+  "homepage": "https://github.com/mneumegen/ec2-gaming",
+  "dependencies": {
+    "async": "^1.5.0",
+    "aws-sdk": "^2.2.19",
+    "colors": "^1.1.2"
+  }
+}
