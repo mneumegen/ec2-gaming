@@ -63,7 +63,7 @@ When you're finished gaming you can press 1 to stop the instance and exit or 2 t
 
 * **price-to-low** - Your bid price for the spot price is too low. Try bumping the `spotPrice` up in `config.json`
 * **capacity-not-available** - There's no servers available for spot requests. Try changing `useSpotImage` to false.
-* When opening In-Home sharing the remote computer is visible but has a Status: Not connected** - Force Steam to check for updates on your locally and remotely.
+* When opening In-Home sharing the remote computer is visible but has a status of `Not connected` - Force Steam to check for updates on your locally and remotely.
 
 ## Optimizations
 
