@@ -11,7 +11,7 @@ With this script you can get in-game with minimal effort.
 There's three phases to starting a gaming instance:
 
 1. Set up AWS with the right security group and start the EC2 instance.
-2. Print out details for accessing the instance using a remote desktop client to login into steam.
+2. Print out details for accessing the instance using a remote desktop client to login into Steam.
 3. Output configurations files to connect to the VPN via [TunnelBlink](https://tunnelblick.net/)
 
 ## Setup
@@ -36,11 +36,11 @@ The first time you run this it will complain about not having any AWS credential
 
 Now when you run the script, it will start up a Windows instance and print out the instance-id and IP address.
 
-On to step two, it will print out details for logging in via RDP. Enter these into your Remote Desktop Software. Once you've logged in it will ask you to change your password, enter a new password and it'll open up the desktop with steam. Login to steam, go to Preferences -> In-Home Sharing Streaming and ensure the enable streaming checkbox is enabled. Then click the logout shortcut on the desktop.
+On to step two, it will print out details for logging in via RDP. Enter these into your Remote Desktop Software. Once you've logged in it will ask you to change your password, enter a new password and it'll open up the desktop with Steam. Login to Steam, go to Preferences -> In-Home Sharing Streaming and ensure the enable streaming checkbox is enabled. Then click the logout shortcut on the desktop.
 
 Step three, in this scripts directory, there's a openVNP directory. Open this and there'll be two files. Open `client.ovpn` with TunnelBlink. You'll have to enter a username and password. The username is Administrator, the password is what you set in the previous step.
 
-Now we're ready to go! Open up steam on your local computer. Once again, go to Settings -> In-Home Sharing Streaming and ensure the enable streaming checkbox is enabled. Now you should see the remote computer appear.
+Now we're ready to go! Open up Steam on your local computer. Once again, go to Settings -> In-Home Sharing Streaming and ensure the enable streaming checkbox is enabled. Now you should see the remote computer appear.
 
 When you're finished gaming you can press 1 to stop the instance and exit or 2 to keep the instance running and quit.
 
@@ -63,8 +63,9 @@ When you're finished gaming you can press 1 to stop the instance and exit or 2 t
 
 * **price-to-low** - Your bid price for the spot price is too low. Try bumping the `spotPrice` up in `config.json`
 * **capacity-not-available** - There's no servers available for spot requests. Try changing `useSpotImage` to false.
+* When opening In-Home sharing the remote computer is visible but has a Status: Not connected** - Force Steam to check for updates on your locally and remotely.
 
 ## Optimizations
 
 * Install RDP software that can open RDP links on the command line. If you switch `useRDPLink` to true the script will do run open rdp://username:password@xx.xxx.xxx. [CoRD](http://cord.sourceforge.net/) does this, Microsoft Remote Desktop does not.
-* Once you've changed the password and logged into steam go into the AWS Console and create image of the instance. Set `imageId` to the image you've just created and `password` to your new password and it will automatically log you in and start up steam next time you run the script.
+* Once you change the Windows password and log into Steam (click Remember my password), go into the AWS Console and create an image of the instance. Set `imageId` to the image you've just created and `password` to your new password and it will automatically log you in and start up Steam next time you run the script.
